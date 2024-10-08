@@ -1,0 +1,347 @@
+/*style.css*/
+
+/* Adjust body padding to ensure the fixed navigation does not overlap content */
+body {
+    margin-bottom: 0px;
+    width: 100%;
+    overflow-x: hidden; /*to prevent horizontal scroll*/
+}
+
+
+
+/*Styling for links-------------------------------------------------------------------------*/
+/*for all links*/
+a {
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bullet-list {
+    list-style: disc;
+    padding-left: 30px;
+}
+
+
+.nav-container a {
+    color: black; /* Sets the link color to gray */
+
+}
+
+.nav-container a:hover {
+    color: black;
+    text-shadow:
+            0 0 10px rgba(128, 128, 128, 0.6) /* Diffused glow */
+
+}
+
+/*Styling for the content links*/
+.content-container a {
+    color: #736e6e; /* Sets the link color to gray */
+}
+
+/*Styling for the external links*/
+.external-link {
+    display: flex;
+    color: black;
+    align-items: center;
+}
+
+/*Make external links orange when hovered*/
+a.external-link:hover, .content-container a:hover, #useful .external-link:hover  {
+    color: orange;
+}
+
+
+#codewars-brand-icon {
+    transition: filter 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#codewars-brand-icon:hover {
+    filter: drop-shadow(0 0 5px #736e6e); /* Adjust color and blur radius as needed */
+}
+
+/* specify link styling for footer, to make them visible on dark background*/
+.footer-column a {
+    color: #fff; /* White links */
+}
+
+.footer-column a:hover {
+    color: #736e6e; /* Light grey for hover */
+}
+
+
+
+/*Navigation ------------------------------------------------------------------------------------------*/
+.nav-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: fixed; /* Fix position to the top of the viewport */
+    top: 0; /* Align the top edge of the element with the top of the viewport */
+    left: 0; /* Align the left edge of the element with the left of the viewport */
+    width: 100%; /* Ensure the container spans the full width */
+    background-color: #FFF; /* Provide a background color to ensure readability over content */
+    z-index: 1000; /* Ensure the nav container stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+}
+
+.logo {
+    display: flex; /* Always visible */
+}
+
+.hamburger-icon {
+    display: none; /* Hidden by default */
+    cursor: pointer; /*changes the cursor's appearance to a pointer hand*/
+}
+
+.menu-items {
+    display: none; /* Hidden by default */
+}
+
+.menu-items ul {
+    margin: 0;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically by default */
+}
+
+.menu-items a {
+    padding: 10px; /* Add some padding between the links for clickability */
+}
+
+
+/*Content ----------------------------------------------------------------------------------------*/
+.body-container {
+    margin: 0 auto; /* Centers the content horizontally */
+    box-sizing: border-box; /* Ensures padding does not affect the overall width */
+}
+
+.content-container div {
+    padding-top: 35px;
+    padding-right: 10px; /* Optional: Adds some padding on the sides */
+}
+
+.text-content {
+    width: 768px;
+    height: auto;
+    margin: auto;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+
+h3, h2, p {
+    margin: 10px;
+}
+
+#home, #history, h1 {
+    text-align: center;
+}
+
+
+/*Content>>quotes ----------------------------------------------------------------------------------------*/
+
+.book-quote {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #ccc;
+    font-style: italic;
+    max-width: 600px;
+}
+
+.book-quote p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.book-quote footer {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+/*Footer ------------------------------------------------------------------------------------------*/
+
+.footer {
+    display: flex;
+    background-color: black;
+    width: 100%;
+}
+
+/*Images --------------------------------------------------------------------------------------------------------------*/
+#logo-img {
+    width: 60px;
+}
+
+/*Make the images responsive */
+img.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*Bird ------------------------------------------------------------------------------------------*/
+
+#scrollImage {
+    position: fixed; /* Makes the image position independent of page scrolling */
+    bottom: 0; /* Aligns the image to the bottom of the viewport */
+    /*left: 200px; /* 20 pixels from the left side of the viewport */
+    right: 0; /* Aligns the image to the right of the viewport (you can adjust this as needed) */
+    z-index: 999; /* Ensures the image stays on top of other content; adjust as necessary */
+    width: 15%;
+}
+
+
+/*Footer ------------------------------------------------------------------------------------------*/
+
+.footer-container {
+    width: 100%;
+    background-color: #333; /* Dark background for the footer */
+    color: #fff; /* Light text color */
+    padding: 20px 0; /* Padding around the footer */
+}
+
+.footer-content {
+    margin: 0 auto; /* Center the footer content */
+    width: 768px; /* Fixed width */
+    display: flex; /* Use flexbox for the columns */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: space-between; /* Space between columns */
+    gap: 10px;
+    color: #fff;
+}
+
+.footer-column {
+    flex: 1; /* Allows columns to grow and fill the space */
+    min-width: 250px; /* Prevents columns from getting too narrow */
+    padding: 0 10px;
+}
+
+/* Specifically target the first footer-column for the creator words */
+.footer-content > .footer-column:first-child {
+    flex-basis: 60%; /* Gives it more space */
+}
+
+/* Style for where do I start, to ensure it's next to the creator words */
+.footer-content > .footer-column:nth-child(2) {
+    flex-basis: 25%; /* Adjusts the basis to fit next to the first column */
+}
+
+/* Ensure the useful links section takes up the full width on a new line */
+.footer-content > .footer-column:last-child {
+    flex-basis: 100%; /* Forces it to take a new line */
+}
+
+
+#contact {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-column ul li {
+    padding-left: 10px;
+}
+
+.brand-icon, i.brand-icon { /*brand icons*/
+    height: 32px; /* Adjusts the height to be about the size of typical font or slightly larger */
+    width: auto; /* Ensures the width is automatically adjusted to maintain the aspect ratio */
+    font-size: 28px;
+    margin: 8px;
+}
+
+
+
+/*Responsive-------------------------------------------------------------------------------------------------------*/
+
+/* Small devices (phones) */
+@media (max-width: 767px) {
+
+    #logo-img {
+        width: 10%;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    #scrollImage {
+        width: 20%;
+        height: auto;
+        position: fixed; /* Makes the image position independent of page scrolling */
+        bottom: 0; /* Aligns the image to the bottom of the viewport */
+        right: 20px; /* Aligns the image to the right of the viewport (you can adjust this as needed) */
+        z-index: 999; /* Ensures the image stays on top of other content; adjust as necessary */
+    }
+    #logo-and-hamburger {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        /*height: 50px; */
+    }
+
+    .hamburger-icon {
+        display: flex; /* Optional: Depending on design */
+        padding: 20px;
+    }
+
+    .menu-items.active {
+        display: flex; /* Use flexbox to control layout */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Take full width */
+        height: 100%;
+    }
+}
+
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hamburger-icon {
+        display: flex; /* Optional: Depending on design */
+        padding: 20px;
+    }
+    .menu-items {
+        display: flex; /* Adjust based on design */
+    }
+    .menu-items ul {
+        flex-direction: row; /* Layout items in a row */
+    }
+    .text-content {
+        width: 100%;
+    }
+}
+
+/* Large devices (desktops) and Extra large devices (large desktops) */
+@media (min-width: 992px) {
+    .body-container {
+        max-width: 1200px; /* Adjust this value based on your design preference */
+    }
+    .hamburger-icon {
+        display: none; /* Hide hamburger */
+    }
+    .menu-items {
+        display: flex; /* Ensure flex layout for container */
+        align-items: center; /* Align items vertically */
+        width: auto; /* Width auto for better control */
+    }
+    .menu-items ul {
+        flex-direction: row; /* Layout items in a row for larger screens */
+    }
+    .menu-items li {
+        display: flex; /* Ensure items are displayed inline */
+    }
+}
