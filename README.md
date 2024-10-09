@@ -1,12 +1,14 @@
 # Stoicism website
+Link to a deployed website: [here](https://stoicism-project.onrender.com)
+
 This repository contains an HTML/CSS website dedicated to Stoic philosophy. It features content on core Stoic principles, quotes from prominent Stoic thinkers, and guidance on applying Stoic wisdom in everyday life. The project is structured with a responsive design and clean UI to provide a seamless browsing experience across devices.
-
+***************************************************************
 ![img.png](img.png)
-
+***************************************************************
 ![img_1.png](img_1.png)
-
+***************************************************************
 ![img_2.png](img_2.png)
-
+***************************************************************
 ## The website uses the following technologies:
 
 ### HTML
@@ -23,8 +25,8 @@ Adds interactivity.
 The "bird" section utilizes JavaScript to change the bird's image when the user scrolls to the bottom of the page. Two bird images (bird_up.png and bird_down.png) are swapped dynamically based on the scroll position.
 
 ![img_3.png](img_3.png)
-
+***************************************************************
 ![img_4.png](img_4.png)
-
+***************************************************************
 ### FontAwesome
 Provides icons for social links and enhance the visual design of the navigation bar. 
